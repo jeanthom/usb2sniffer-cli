@@ -15,6 +15,6 @@ make
 ## HowTo
 
 ```
-./lcsniff fs /dev/ft60x0 test.pcap
-./lcsniff fs /dev/ft60x0 test.usb
+./lcsniff-cli fs /dev/ft60x0 test.pcap
+./lcsniff-cli fs /dev/ft60x0 test.usb
 ```
