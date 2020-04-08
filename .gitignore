@@ -1,0 +1,4 @@
+src/*.o
+xbar/*.o
+xbar/ft60x/*.o
+lcsniff-cli
