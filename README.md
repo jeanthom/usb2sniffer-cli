@@ -18,3 +18,5 @@ make
 ./lcsniff-cli fs /dev/ft60x0 test.pcap
 ./lcsniff-cli fs /dev/ft60x0 test.usb
 ```
+
+Then `CTRL+C` to stop capture.
