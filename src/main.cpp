@@ -38,6 +38,7 @@ enum CaptureSpeed {
 };
 
 void sigintHandler(int sig_num) {
+	printf("Stopping capture...\n");
 	g_captureState = TEARDOWN;
 }
 
@@ -45,7 +46,7 @@ int capture(CaptureSpeed speed, const char *device, const char *filename, FileFo
 	ftdev_t fd;
 	int ret;
 	char *buf;
-	char *pktbuf;
+	char pktbuf[2048];
 	int streamid;
 	size_t len;
 	uint32_t plen;
@@ -92,8 +93,6 @@ int capture(CaptureSpeed speed, const char *device, const char *filename, FileFo
 
 	auto session = usb_new_session();
 
-	pktbuf = (char *)malloc(2048);
-
 	while (g_captureState != IDLE) {
 		if (g_captureState == TEARDOWN) {
 			/* stop capture */
@@ -133,6 +132,7 @@ int capture(CaptureSpeed speed, const char *device, const char *filename, FileFo
 				case USB_EVENT_START:
 					g_captureState = CAPTURING;
 					usb_reset_timestamp(session);
+					printf("Starting capture...\n");
 					break;
 				default:
 					break;
@@ -153,7 +153,6 @@ int capture(CaptureSpeed speed, const char *device, const char *filename, FileFo
 
 exit:
 	delete exp;
-	free(pktbuf);
 	ft60x_close(fd);
 
 	return 0;
