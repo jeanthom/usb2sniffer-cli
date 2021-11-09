@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+#include "packing.h"
 
-struct eb_header_s {
+PACK(struct eb_header_s {
     uint16_t magic;             /* Magic 0x4E6F*/
     uint8_t pf:1;               /* Probe-Flag */
     uint8_t pr:1;               /* Probe-Response */
@@ -25,7 +26,7 @@ struct eb_header_s {
     uint8_t byte_enable;        /* Byte enable 8/16/32 */
     uint8_t w_count;            /* write count */
     uint8_t r_count;            /* read count */
-}__attribute__((packed));
+});
 
 uint32_t wswap(uint32_t const val)
 {

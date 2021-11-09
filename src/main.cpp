@@ -3,7 +3,9 @@
 #include <cstring>
 #include <cstdint>
 #include <string>
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <signal.h>
 #include <fcntl.h>
 #include "pcapexport.h"

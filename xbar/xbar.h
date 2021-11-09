@@ -1,7 +1,7 @@
 #ifndef __XBAR_H
 #define __XBAR_H
 
-#include <strings.h>
+#include "strings.h"
 #include <stdint.h>
 
 #include "ft60x/fops.h"
