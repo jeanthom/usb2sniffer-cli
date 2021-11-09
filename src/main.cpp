@@ -162,8 +162,13 @@ exit:
 
 int main(int argc, char *argv[]) {
 	if (argc != 4) {
+#ifndef _WIN32
 		fprintf(stderr, "Usage: %s <speed: ls/fs/hs> <device> <output file>\n", argv[0]);
 		fprintf(stderr, "example: %s hs /dev/ft60x0 foobar.pcap\n", argv[0]);
+#else
+		fprintf(stderr, "Usage: %s <speed: ls/fs/hs> 0 <output file>\n", argv[0]);
+		fprintf(stderr, "example: %s hs 0 foobar.pcap\n", argv[0]);
+#endif
 		return EXIT_FAILURE;
 	}
 
