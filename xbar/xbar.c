@@ -12,6 +12,16 @@
 #define CSR_ACCESSORS_DEFINED 1
 #include "csr.h"
 #include "sdram_phy.h"
+#include "packing.h"
+
+PACK(struct xbar_s {
+    uint32_t magic;
+    uint32_t streamid;
+    uint32_t len;
+});
+
+ftdev_t gfd;
+
 #ifdef _WIN32
 static void usleep(__int64 usec) 
 { 
@@ -26,15 +36,6 @@ static void usleep(__int64 usec)
     CloseHandle(timer); 
 }
 #endif
-#include "packing.h"
-
-PACK(struct xbar_s {
-    uint32_t magic;
-    uint32_t streamid;
-    uint32_t len;
-});
-
-ftdev_t gfd;
 
 void cdelay(int val)
 {

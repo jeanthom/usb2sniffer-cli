@@ -64,17 +64,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(ProjectDir)xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(ProjectDir)..;$(ProjectDir)..\src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(ProjectDir)xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(ProjectDir)..;$(ProjectDir)..\src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>$(ProjectDir)xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>$(ProjectDir)..;$(ProjectDir)..\src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>$(ProjectDir)xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\xbar\ft60x\FTD3XXLibrary\$(PlatformName);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>$(ProjectDir)..;$(ProjectDir)..\src;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -130,25 +134,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\parse.c" />
-    <ClCompile Include="src\pcapexport.cpp" />
-    <ClCompile Include="xbar\etherbone.c" />
-    <ClCompile Include="xbar\ft60x\fops.c" />
-    <ClCompile Include="xbar\xbar.c" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\parse.c" />
+    <ClCompile Include="..\src\pcapexport.cpp" />
+    <ClCompile Include="..\xbar\etherbone.c" />
+    <ClCompile Include="..\xbar\ft60x\fops.c" />
+    <ClCompile Include="..\xbar\xbar.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="packing.h" />
-    <ClInclude Include="src\parse.h" />
-    <ClInclude Include="src\pcapexport.h" />
-    <ClInclude Include="src\strings.h" />
-    <ClInclude Include="xbar\csr.h" />
-    <ClInclude Include="xbar\etherbone.h" />
-    <ClInclude Include="xbar\flags.h" />
-    <ClInclude Include="xbar\ft60x\fops.h" />
-    <ClInclude Include="xbar\ft60x\ftd3xxlibrary\FTD3XX.h" />
-    <ClInclude Include="xbar\sdram_phy.h" />
-    <ClInclude Include="xbar\xbar.h" />
+    <ClInclude Include="..\src\packing.h" />
+    <ClInclude Include="..\src\parse.h" />
+    <ClInclude Include="..\src\pcapexport.h" />
+    <ClInclude Include="..\src\strings.h" />
+    <ClInclude Include="..\xbar\csr.h" />
+    <ClInclude Include="..\xbar\etherbone.h" />
+    <ClInclude Include="..\xbar\flags.h" />
+    <ClInclude Include="..\xbar\ft60x\fops.h" />
+    <ClInclude Include="..\xbar\ft60x\ftd3xxlibrary\FTD3XX.h" />
+    <ClInclude Include="..\xbar\sdram_phy.h" />
+    <ClInclude Include="..\xbar\xbar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,57 +15,57 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\pcapexport.cpp">
+    <ClCompile Include="..\src\parse.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\parse.c">
+    <ClCompile Include="..\src\pcapexport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xbar\etherbone.c">
+    <ClCompile Include="..\xbar\etherbone.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xbar\xbar.c">
+    <ClCompile Include="..\xbar\ft60x\fops.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xbar\ft60x\fops.c">
+    <ClCompile Include="..\xbar\xbar.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\parse.h">
+    <ClInclude Include="..\src\packing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\pcapexport.h">
+    <ClInclude Include="..\src\parse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\csr.h">
+    <ClInclude Include="..\src\pcapexport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\etherbone.h">
+    <ClInclude Include="..\src\strings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\flags.h">
+    <ClInclude Include="..\xbar\csr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\sdram_phy.h">
+    <ClInclude Include="..\xbar\etherbone.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\xbar.h">
+    <ClInclude Include="..\xbar\flags.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\ft60x\fops.h">
+    <ClInclude Include="..\xbar\ft60x\fops.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="xbar\ft60x\ftd3xxlibrary\FTD3XX.h">
+    <ClInclude Include="..\xbar\ft60x\ftd3xxlibrary\FTD3XX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\strings.h">
+    <ClInclude Include="..\xbar\sdram_phy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="packing.h">
+    <ClInclude Include="..\xbar\xbar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
