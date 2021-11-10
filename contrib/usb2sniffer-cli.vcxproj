@@ -145,7 +145,6 @@
     <ClInclude Include="..\src\packing.h" />
     <ClInclude Include="..\src\parse.h" />
     <ClInclude Include="..\src\pcapexport.h" />
-    <ClInclude Include="..\src\strings.h" />
     <ClInclude Include="..\xbar\csr.h" />
     <ClInclude Include="..\xbar\etherbone.h" />
     <ClInclude Include="..\xbar\flags.h" />
