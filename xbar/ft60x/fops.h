@@ -9,6 +9,13 @@
     #include "FTD3XXLibrary/FTD3XX.h"
 #endif
 
+#ifdef _WIN32
+	#if defined(_MSC_VER)
+	#include <BaseTsd.h>
+	typedef SSIZE_T ssize_t;
+	#endif
+#endif
+
 #ifdef __linux__
 typedef int ftdev_t;
 #else

@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <fcntl.h>
 #include <stdint.h>
 
@@ -10,14 +12,30 @@
 #define CSR_ACCESSORS_DEFINED 1
 #include "csr.h"
 #include "sdram_phy.h"
+#include "packing.h"
 
-struct xbar_s {
+PACK(struct xbar_s {
     uint32_t magic;
     uint32_t streamid;
     uint32_t len;
-}__attribute__((packed));
+});
 
 ftdev_t gfd;
+
+#ifdef _WIN32
+static void usleep(__int64 usec) 
+{ 
+    HANDLE timer; 
+    LARGE_INTEGER ft; 
+
+    ft.QuadPart = -(10*usec); // Convert to 100 nanosecond interval, negative value indicates relative time
+
+    timer = CreateWaitableTimer(NULL, TRUE, NULL); 
+    SetWaitableTimer(timer, &ft, 0, NULL, NULL, 0); 
+    WaitForSingleObject(timer, INFINITE); 
+    CloseHandle(timer); 
+}
+#endif
 
 void cdelay(int val)
 {

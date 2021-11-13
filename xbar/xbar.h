@@ -1,7 +1,9 @@
 #ifndef __XBAR_H
 #define __XBAR_H
 
+#ifndef _WIN32
 #include <strings.h>
+#endif
 #include <stdint.h>
 
 #include "ft60x/fops.h"
