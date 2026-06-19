@@ -182,7 +182,7 @@ int main(int argc, char *argv[]) {
 		} else if (extension == "usb") {
 			format = USB;
 		} else {
-			fprintf(stderr, "Unrecognized %s extension\n", extension);
+			fprintf(stderr, "Unrecognized %s extension\n", extension.c_str());
 			return EXIT_FAILURE;
 		}
 	} else {
